@@ -17,27 +17,21 @@
 ### ⏰ Pomodoro Timer
 - **Tích hợp timer Pomodoro**: Hỗ trợ phương pháp học tập/làm việc hiệu quả
 - **Tùy chỉnh thời gian**: Cài đặt thời gian work và break
-- **Thông báo thông minh**: Nhận thông báo khi hết thời gian
 - **Tự động điều khiển đèn**: Đèn thay đổi theo chu kỳ Pomodoro
 
 ### 📊 Giám sát và Thống kê
 - **Biểu đồ sử dụng**: Theo dõi mức độ sử dụng đèn theo thời gian
 - **Lịch sử hoạt động**: Xem lại các thao tác đã thực hiện
-- **Thống kê tiết kiệm năng lượng**: Phân tích hiệu quả sử dụng
 
 ### 🎨 Giao diện người dùng
 - **Material Design 3**: Giao diện hiện đại, thân thiện
 - **Dark/Light Theme**: Tự động thích ứng theo theme hệ thống
-- **Responsive**: Tối ưu cho mọi kích thước màn hình
-- **Smooth Animations**: Hiệu ứng chuyển động mượt mà
 
 ## 🛠️ Công nghệ sử dụng
 
 ### Frontend
 - **Flutter 3.8+**: Framework phát triển ứng dụng đa nền tảng
 - **Riverpod**: State management hiện đại và hiệu quả
-- **Google Fonts**: Typography đẹp và đa dạng
-- **FL Chart**: Tạo biểu đồ tương tác
 
 ### Backend & Services
 - **Firebase Realtime Database**: Cơ sở dữ liệu thời gian thực
@@ -51,24 +45,8 @@
 
 ## 📱 Screenshots
 
-```
-🏠 Home Screen          📊 Analytics          ⚙️ Settings
-┌─────────────────┐     ┌─────────────────┐    ┌─────────────────┐
-│  Smart Light 👉 │     │   Usage Chart   │    │   Preferences   │
-│                 │     │                 │    │                 │
-│ ┌─────────────┐ │     │     📈         │    │  🔔 Notifications│
-│ │   Chart     │ │     │                 │    │  🎨 Theme       │
-│ └─────────────┘ │     │ ┌─────────────┐ │    │  🌐 Language    │
-│                 │     │ │  Statistics │ │    │                 │
-│ 🔆 Brightness   │     │ └─────────────┘ │    │                 │
-│ ════════════●   │     │                 │    │                 │
-│                 │     │                 │    │                 │
-│ 💡 Light    [ON]│     │                 │    │                 │
-│ ☀️ Auto     [OFF]│     │                 │    │                 │
-│ ⚡ Pomodoro [ON]│     │                 │    │                 │
-│ 🎨 Color  Yellow│     │                 │    │                 │
-└─────────────────┘     └─────────────────┘    └─────────────────┘
-```
+<img src="media/screenshot_screen.jpg" width="250">
+
 
 ## 🚀 Bắt đầu
 
@@ -158,64 +136,44 @@ FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 ### Firebase Realtime Database Structure
 ```json
 {
-  "smartlight": {
+  "LED_CONTROL": {
     "control": {
       "nutNguon": "1",           // 0: OFF, 1: ON
       "nutDoiMau": "0",          // 0: White, 1: Yellow
       "nutTuDongSang": "0",      // 0: Manual, 1: Auto
-      "doSang": "50"             // 0-100
+      "doSangCuaDen": "50",            // 0-100
+      "nutTuDongSang": "0"             // 0-1 
     },
     "promodoro": {
       "isNotifiOn": "0",         // 0: OFF, 1: ON
       "timeWork": "25",          // Work time in minutes
       "timeBreak": "5"           // Break time in minutes
     },
-    "sensors": {
-      "lightSensor": "45",       // Light level 0-100
-      "timestamp": "1693737600"  // Unix timestamp
+    "timeUse": {
+      "2025-08-30": "45",       
+      "2025-08-29": "25",       
     }
   }
 }
 ```
 
 ## 🤝 Đóng góp
-
 1. Fork project
 2. Tạo feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Tạo Pull Request
 
-## 📋 Todo List
-
-- [ ] Thêm hỗ trợ multiple devices
-- [ ] Tích hợp voice control
-- [ ] Thêm scheduling tự động
-- [ ] Dark mode improvements
-- [ ] Widget cho home screen
-- [ ] Backup/restore settings
-- [ ] Energy consumption tracking
 
 ## 🐛 Báo lỗi
-
 Nếu bạn gặp lỗi, vui lòng tạo [issue](https://github.com/yourusername/flutter_smartlight/issues) với:
 - Mô tả chi tiết lỗi
 - Steps để reproduce
 - Screenshots (nếu có)
 - Device/OS information
 
-## 📄 License
-
-Dự án này được phân phối dưới MIT License. Xem file `LICENSE` để biết thêm chi tiết.
-
-## 👨‍💻 Tác giả
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
 
 ## 🙏 Acknowledgments
-
 - [Flutter Team](https://flutter.dev) - Framework tuyệt vời
 - [Firebase](https://firebase.google.com) - Backend as a Service
 - [Material Design](https://material.io) - Design system
