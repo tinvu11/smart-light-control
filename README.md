@@ -45,7 +45,7 @@
 
 ## 📱 Screenshots
 
-<img src="media/screenshot_screen.jpg" width="250">
+<img src="media/screenshot.jpg" width="250">
 
 
 ## 🚀 Bắt đầu
